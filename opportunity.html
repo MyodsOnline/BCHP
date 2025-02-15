@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Итоги</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/script.js"></script>
+</head>
+<body>
+    <div class="main_wrapper">
+        <h3>В случае успешной реализации, возможно масштабирование проекта на иные культовые локации Санкт-Петербурга</h3>
+        <h4>Например: кот Елисей на Малой Садовой, заяц Арсений у Петропаловской крепости</h4>
+        
+        <div class="slider">
+            <img src="img/elis.png" alt="Елисей" class="slider-image">
+            <img src="img/ars.png" alt="Арсений" class="slider-image">
+        </div>
+        <div class="documents">
+            <p><img src="img/document.svg" alt="Документ" width="20" height="20"><a href="asset/BP.pdf" target="_blank">Бизнес план</a></p>
+            <p><img src="img/document.svg" alt="Документ" width="20" height="20"><a href="asset/TZ.pdf" target="_blank">Тех. Задание</a></p>
+        </div>
+        <nav>
+            <a class="btn_link_empty big" href="index.html">Благодарю за внимание</a>
+            <a class="btn_link big" href="index.html">Конец</a>
+        </nav>
+    </div>
+    <script>
+        let currentIndex = 0;
+        const images = document.querySelectorAll('.slider-image');
+        setInterval(() => {
+            images[currentIndex].style.display = 'none';
+            currentIndex = (currentIndex + 1) % images.length;
+            images[currentIndex].style.display = 'block';
+        }, 1500);
+    </script>
+</body>
+</html>

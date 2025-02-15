@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Итоги</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/script.js"></script>
+</head>
+<body>
+    <div class="main_wrapper">
+        <h3>Вот и вся незатейливая суть забавы.<br>
+        Основная проблема заключается в том, что наибольшего эффекта генерации элементов дополненной реальности возможно добиться, если разместить qr-код в непосредственной близости с объектом.</h3>
+        <h4>Принимая во внимание историческую и культурую ценность локации, выбор места для размещения qr-кода должен быть тщательно продуман и согласован.<br>
+        Приемлимый вариант размещения qr-кода приведен ниже.</h4>
+        
+        <div class="slider">
+            <img src="img/orig.png" alt="Оригинал" class="slider-image">
+            <img src="img/upd.png" alt="Обновленный" class="slider-image">
+        </div>
+        
+        <nav>
+            <a class="btn_link_empty big" href="index.html">В начало</a>
+            <a class="btn_link big" href="opportunity.html">Возможности</a>
+        </nav>
+    </div>
+    <script>
+        let currentIndex = 0;
+        const images = document.querySelectorAll('.slider-image');
+        setInterval(() => {
+            images[currentIndex].style.display = 'none';
+            currentIndex = (currentIndex + 1) % images.length;
+            images[currentIndex].style.display = 'block';
+        }, 1500);
+    </script>
+</body>
+</html>
