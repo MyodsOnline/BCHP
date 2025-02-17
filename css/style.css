@@ -107,7 +107,10 @@ nav {
     .main_wrapper h1 {
         width: 60%;
     }
-    h3 {
+    h3, h4 {
+        width: 90%;
+    }
+    .slider {
         width: 90%;
     }
 }
