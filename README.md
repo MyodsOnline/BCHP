@@ -11,6 +11,9 @@
 Интерфейс доступен по [ссылке](https://myodsonline.github.io/BCHP/)
 
 Можно воспользоваться qr-кодом
+<div style="text-align: center;">
+  <img src="img/qr-code.png" style="width: 400px; max-width: 400px;" alt="qr-код">
+</div>
 
 
 
