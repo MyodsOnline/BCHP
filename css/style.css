@@ -101,7 +101,7 @@ nav {
 
 /* Превью-режим */
 .info-preview {
-  width: 100%;
+  width: 50vh;
   max-width: 300px;
   display: block;
   margin: 20px auto;
@@ -128,7 +128,7 @@ nav {
 }
 
 #fullscreen-overlay img {
-  width: 80%;
+  width: 50vh;
   height: auto;
   max-height: 90vh;
   object-fit: contain;
