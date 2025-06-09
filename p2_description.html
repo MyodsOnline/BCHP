@@ -17,8 +17,61 @@
             <a class="btn_link big" href="bye_coin.html">Вот пример</a>
         </nav>
     </div>
-    <script>
-        
-    </script>
+
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const img = document.getElementById("fullscreen-img");
+
+    img.addEventListener("click", function () {
+      // Создаём фон
+      const fullscreen = document.createElement("div");
+      fullscreen.id = "fullscreen-overlay";
+      fullscreen.style.position = "fixed";
+      fullscreen.style.top = 0;
+      fullscreen.style.left = 0;
+      fullscreen.style.width = "100%";
+      fullscreen.style.height = "100%";
+      fullscreen.style.backgroundColor = "rgba(0, 0, 0, 0)";
+      fullscreen.style.display = "flex";
+      fullscreen.style.alignItems = "center";
+      fullscreen.style.justifyContent = "center";
+      fullscreen.style.zIndex = 9999;
+      fullscreen.style.cursor = "pointer";
+      fullscreen.style.transition = "background-color 0.3s ease";
+
+      // Создаём изображение
+      const fullImg = document.createElement("img");
+      fullImg.src = "img/info.png";
+      fullImg.alt = "Info Fullscreen";
+      fullImg.style.maxWidth = "90%";
+      fullImg.style.maxHeight = "90%";
+      fullImg.style.opacity = 0;
+      fullImg.style.transform = "scale(0.9)";
+      fullImg.style.transition = "opacity 0.3s ease, transform 0.3s ease";
+
+      fullscreen.appendChild(fullImg);
+      document.body.appendChild(fullscreen);
+
+      // Активируем анимацию через малую задержку
+      requestAnimationFrame(() => {
+        fullscreen.style.backgroundColor = "rgba(0, 0, 0, 0.95)";
+        fullImg.style.opacity = 1;
+        fullImg.style.transform = "scale(1)";
+      });
+
+      // Клик по фону — закрыть и перейти на p2_description.html
+      fullscreen.addEventListener("click", function () {
+        // Плавно убираем
+        fullscreen.style.backgroundColor = "rgba(0, 0, 0, 0)";
+        fullImg.style.opacity = 0;
+        fullImg.style.transform = "scale(0.9)";
+
+        setTimeout(() => {
+          window.location.href = "p2_description.html";
+        }, 300); // после окончания анимации
+      });
+    });
+  });
+</script>
 </body>
 </html>
