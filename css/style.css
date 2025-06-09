@@ -101,9 +101,9 @@ nav {
 
 /* Превью-режим */
 .info-preview {
-  width: 35vh;
+  width: 30vh;
   display: block;
-  margin: 20px auto;
+  margin: 10px auto;
   cursor: pointer;
   border-radius: 12px;
   box-shadow: 0 2px 8px rgba(0,0,0,0.2);
